@@ -4,17 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
+    "dev:build:server": "webpack --config webpack.server.js --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/ovidb/react-ssr.git"
   },
-  "keywords": [
-    "react",
-    "server-side",
-    "rendering"
-  ],
+  "keywords": ["react", "server-side", "rendering"],
   "author": "Ovidiu D. Bodea",
   "license": "ISC",
   "bugs": {
