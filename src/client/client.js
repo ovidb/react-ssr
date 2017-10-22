@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './components/Home';
+import { BrowserRouter } from 'react-router-dom';
 
-// ReactDOM.render(<Home />, document.querySelector('#root'));
-// -> Calling ReactDOM.render() to hydrate server-rendered markup will stop working in React v17.
-// -> Replace the ReactDOM.render() call with ReactDOM.hydrate()
+import Routes from './Routes';
 
-ReactDOM.hydrate(<Home />, document.querySelector('#root'));
+ReactDOM.hydrate(
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>,
+  document.querySelector('#root'),
+);
